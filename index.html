@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Privacy Policy</h1>
+
+    <div id="policy-content"></div>
+
+    <script>
+        // Fetch the content of the policy.txt file
+        fetch('policy.txt')
+            .then(response => response.text())
+            .then(content => {
+                // Display the content in the policy-content div
+                document.getElementById('policy-content').innerHTML = content;
+            })
+            .catch(error => console.error('Error fetching policy.txt:', error));
+    </script>
+
+</body>
+
+</html>
